@@ -1,3 +1,4 @@
+import re
 
 f = open("D:/Mensaje.txt", "r")
 
@@ -6,4 +7,5 @@ instruction1 = f.readline().strip()
 instruction2 = f.readline().strip()
 message = f.readline().strip()
 
-print(instruction1, instruction2, message)
+message = re.sub(r'(.)\1+', r'\1', '12233322155552')
+print(message)

@@ -9,4 +9,6 @@ message = f.readline().strip()
 
 message = re.sub(r'(.)\1+', r'\1', message)
 
-print(message)
+f = open("D:/Mensaje-result.txt", "w")
+f.write("%s\n%s" %(("Si" if instruction1 in message else "No"), ("Si" if instruction2 in message else "No")))
+f.close()
